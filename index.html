@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6269735652380080">
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6269735652380080"
+    crossorigin="anonymous"
+  ></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Jogo da velha em JavaScript com modo contra o computador, dificuldade facil e expert."
+  >
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="site-shell">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navegacao principal">
+        <a class="brand" href="index.html">Jogo da Velha</a>
+        <div class="nav-links">
+          <a href="privacy.html">Privacidade</a>
+          <a href="contact.html">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="ad-slot ad-slot--top" aria-labelledby="ad-top-title">
+      <div class="ad-slot__label">
+        <span id="ad-top-title">Banner superior</span>
+        <small>Espaco para anuncio horizontal</small>
+      </div>
+      <div
+        class="ad-placeholder"
+        data-ad-slot="top-banner"
+        data-ad-format="horizontal"
+      >
+        <script>
+          atOptions = {
+            'key' : '6525bbd17cc777508b8210b86d1d66e5',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/6525bbd17cc777508b8210b86d1d66e5/invoke.js"></script>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <section class="card">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Vamos Jogar ?</p>
+            <h1>Jogo da Velha</h1>
+            <p class="subtitle">Jogue contra o computador nos modos facil e expert.</p>
+          </div>
+
+          <img
+            class="hero-image"
+            src="assets/idosa.svg"
+            alt="Ilustracao de uma idosa sorrindo"
+            width="132"
+            height="132"
+          >
+        </div>
+
+        <div class="controls" aria-label="Configuracoes da partida">
+          <label class="control">
+            <span>Modo</span>
+            <select id="mode">
+              <option value="computer" selected>Contra o computador</option>
+              <option value="human">Dois jogadores</option>
+            </select>
+          </label>
+
+          <label class="control">
+            <span>Dificuldade</span>
+            <select id="difficulty">
+              <option value="easy">Facil</option>
+              <option value="expert">Expert</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="status-panel">
+          <p id="status" class="status">Vez do jogador X</p>
+          <button id="restart" class="button" type="button">Reiniciar rodada</button>
+        </div>
+
+        <div class="scoreboard" aria-label="Placar">
+          <div class="score">
+            <span class="score-label">X</span>
+            <strong id="score-x">0</strong>
+          </div>
+          <div class="score">
+            <span class="score-label">Empates</span>
+            <strong id="score-draw">0</strong>
+          </div>
+          <div class="score">
+            <span class="score-label">O</span>
+            <strong id="score-o">0</strong>
+          </div>
+        </div>
+
+        <div class="board" id="board" role="grid" aria-label="Tabuleiro de jogo da velha">
+          <button class="cell" type="button" data-cell="0" aria-label="Casa 1"></button>
+          <button class="cell" type="button" data-cell="1" aria-label="Casa 2"></button>
+          <button class="cell" type="button" data-cell="2" aria-label="Casa 3"></button>
+          <button class="cell" type="button" data-cell="3" aria-label="Casa 4"></button>
+          <button class="cell" type="button" data-cell="4" aria-label="Casa 5"></button>
+          <button class="cell" type="button" data-cell="5" aria-label="Casa 6"></button>
+          <button class="cell" type="button" data-cell="6" aria-label="Casa 7"></button>
+          <button class="cell" type="button" data-cell="7" aria-label="Casa 8"></button>
+          <button class="cell" type="button" data-cell="8" aria-label="Casa 9"></button>
+        </div>
+
+        <button id="reset-score" class="button secondary" type="button">Zerar placar</button>
+      </section>
+
+      <aside class="sidebar">
+        <section class="info-card">
+          <h2>Monetizacao</h2>
+          <p>
+            Este layout ja tem espacos reservados para anuncios. Enquanto o site nao estiver online
+            e aprovado, eles aparecem apenas como placeholders.
+          </p>
+        </section>
+
+        <section class="ad-slot ad-slot--side" aria-labelledby="ad-side-title">
+          <div class="ad-slot__label">
+            <span id="ad-side-title">Espaco lateral</span>
+            <small>Bom para anuncio responsivo</small>
+          </div>
+          <div
+            class="ad-placeholder ad-placeholder--tall"
+            data-ad-slot="sidebar-rectangle"
+            data-ad-format="rectangle"
+          >
+            <strong>Retangulo 300x250</strong>
+            <script>
+              atOptions = {
+                'key' : 'fa5e135eb96ad6dbe3251c8a43406b79',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/fa5e135eb96ad6dbe3251c8a43406b79/invoke.js"></script>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="ad-slot ad-slot--bottom" aria-labelledby="ad-bottom-title">
+      <div class="ad-slot__label">
+        <span id="ad-bottom-title">Banner inferior</span>
+        <small>Banner pos-jogo</small>
+      </div>
+      <div
+        class="ad-placeholder"
+        data-ad-slot="bottom-banner"
+        data-ad-format="horizontal"
+      >
+        <script>
+          atOptions = {
+            'key' : '6525bbd17cc777508b8210b86d1d66e5',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/6525bbd17cc777508b8210b86d1d66e5/invoke.js"></script>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Jogo da Velha em JavaScript.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Politica de Privacidade</a>
+        <a href="contact.html">Contato</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="adsense.js"></script>
+</body>
+</html>
